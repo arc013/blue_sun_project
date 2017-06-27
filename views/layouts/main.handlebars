@@ -11,6 +11,7 @@
 
       <script type="text/javascript" src="js/main.js"></script>
 			<script type="text/javascript" src="js/footer.js"></script>
+
 			<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 			<link rel="stylesheet" href="/css/bootstrap.min.css">
 			<link rel="stylesheet" href="/css/main.css">
@@ -68,7 +69,7 @@
 								<li class="address_desktop"> 
 									<strong>Address:</strong> 4646 Convoy St. #114 San Diego, CA 92111
 								</li>
-								<li class="address_mobile"> 
+								<li class="address_mobile">
 									<strong>Address:</strong> 4646 Convoy St. #114 
 								</li>
 								<li class="address_mobile address_margin"> 
@@ -98,6 +99,29 @@
 					</div>
 				</div>
 			</div>
+
 		</footer>
+        <script type="text/javascript">
+
+
+            if (window.screen.width<768){
+                $(".address_desktop").hide();
+            } else {
+                $(".address_mobile").hide();
+            }
+
+            window.onresize = function(event) {
+
+                if (window.screen.width<768){
+                    $(".address_desktop").hide();
+                } else {
+                    $(".address_mobile").hide();
+                }
+
+            };
+
+
+        </script>
 <!-- FOOTER END -->
+
 	</html>
